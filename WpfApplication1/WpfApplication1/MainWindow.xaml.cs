@@ -31,30 +31,25 @@ namespace WpfApplication1
             ShapesBox.Items.Add("Line");
 
         }
-        /// <summary>
-        /// Handles the MouseUp event of the drawCanvas control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="MouseButtonEventArgs"/> instance containing the event data.</param>
-        private void drawCanvas_MouseUp(object sender, MouseButtonEventArgs e)
+       
+        public string CheckCbItem()
         {
-            drawCircle circle1 = new drawCircle(40,40);
-            drawSquare square1 = new drawSquare(180, 180);
-            drawLine line1 = new drawLine(200, 100 , 300, 100);
-            List<Shape> groupe = new List<Shape>();
-            groupe.Add(circle1);
-            groupe.Add(square1);
-            groupe.Add(line1);
-
-            foreach(Shape shape in groupe)
-            {
-                shape.DisplayOn(this.drawCanvas);
+            string SelectedItem = "";
+            switch(ShapesBox.SelectedIndex){
+                case 1:
+                    SelectedItem = "Square";
+                    break;
+                case 2:
+                    SelectedItem = "Circle";
+                    break;
+                case 3:
+                    SelectedItem = "Line";
+                    break;                    
             }
+            return SelectedItem;
         }
+        
+        
 
-        private void ShapesBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }
