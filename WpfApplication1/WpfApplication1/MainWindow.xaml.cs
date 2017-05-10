@@ -90,5 +90,6 @@ namespace WpfApplication1
                 // methode maken die een Lijntje op de geklikte plek laat zien
             }
         }
+
     }
 }
