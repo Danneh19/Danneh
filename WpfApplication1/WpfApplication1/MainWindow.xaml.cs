@@ -50,6 +50,11 @@ namespace WpfApplication1
             {
                 shape.DisplayOn(this.drawCanvas);
             }
-        } 
+        }
+
+        private void ShapesBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
