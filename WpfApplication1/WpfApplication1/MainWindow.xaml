@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="525">
     <Grid>
-        <Canvas x:Name="drawCanvas" HorizontalAlignment="Left" Height="299" Margin="11,61,0,0" VerticalAlignment="Top" Width="497" MouseUp="drawCanvas_MouseUp" Background="#FFCBCBCB"/>
-        <ComboBox x:Name="ShapesBox" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="267" Height="46" FontSize="48"/>
+        <Canvas x:Name="drawCanvas" HorizontalAlignment="Left" Height="299" Margin="11,61,0,0" VerticalAlignment="Top" Width="497" Background="#FFCBCBCB"/>
+        <ComboBox x:Name="ShapesBox" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="267" Height="46" FontSize="32"/>
 
     </Grid>
 </Window>
