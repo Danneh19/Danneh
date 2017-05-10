@@ -8,10 +8,10 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    public class Circle : Shape
+    public class drawCircle : Shape
     {
         private Ellipse ellipse;
-        public Circle(int initx, int inity)
+        public drawCircle(int initx, int inity)
         {
             x = initx;
             y = inity;
