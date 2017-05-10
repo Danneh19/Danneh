@@ -36,20 +36,58 @@ namespace WpfApplication1
         {
             string SelectedItem = "";
             switch(ShapesBox.SelectedIndex){
-                case 1:
+                case 0:
                     SelectedItem = "Square";
                     break;
-                case 2:
+                case 1:
                     SelectedItem = "Circle";
                     break;
-                case 3:
+                case 2:
                     SelectedItem = "Line";
                     break;                    
             }
             return SelectedItem;
         }
-        
-        
 
+        private void drawCanvas_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            
+            if (CheckCbItem() == "")
+            {
+                // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...
+            }
+            else if (CheckCbItem() == "Square")
+            {
+                // methode maken die een gekleurd vierkantje op de geklikte plek laat zien
+            }
+            else if (CheckCbItem() == "Circle")
+            {
+                // methode maken die een gekleurd circeltje op de geklikte plek laat zien
+            }
+            else if (CheckCbItem() == "Line")
+            {
+                // methode maken die een gekleurd Lijntje op de geklikte plek laat zien
+            }
+        }
+
+        private void drawCanvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (CheckCbItem() == "")
+            {
+                // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...
+            }
+            else if (CheckCbItem() == "Square")
+            {
+                // methode maken die een vierkantje op de geklikte plek laat zien
+            }
+            else if (CheckCbItem() == "Circle")
+            {
+                // methode maken die een circeltje op de geklikte plek laat zien
+            }
+            else if (CheckCbItem() == "Line")
+            {
+                // methode maken die een Lijntje op de geklikte plek laat zien
+            }
+        }
     }
 }
