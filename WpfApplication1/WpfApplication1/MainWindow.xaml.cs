@@ -38,8 +38,8 @@ namespace WpfApplication1
         /// <param name="e">The <see cref="MouseButtonEventArgs"/> instance containing the event data.</param>
         private void drawCanvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Circle circle1 = new Circle(40,40);
-            Square square1 = new Square(180, 180);
+            drawCircle circle1 = new drawCircle(40,40);
+            drawSquare square1 = new drawSquare(180, 180);
             drawLine line1 = new drawLine(200, 100 , 300, 100);
             List<Shape> groupe = new List<Shape>();
             groupe.Add(circle1);

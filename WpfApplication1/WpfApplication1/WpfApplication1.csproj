@@ -55,10 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Circle.cs" />
+    <Compile Include="drawCircle.cs" />
     <Compile Include="drawLine.cs" />
     <Compile Include="Shape.cs" />
-    <Compile Include="Square.cs" />
+    <Compile Include="drawSquare.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

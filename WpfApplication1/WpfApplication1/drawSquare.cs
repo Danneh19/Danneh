@@ -7,10 +7,10 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    public class Square : Shape
+    public class drawSquare : Shape
     {
         private Rectangle rect;
-        public Square(int initX, int initY)
+        public drawSquare(int initX, int initY)
         {
             this.x = initX;
             this.y = initY;
