@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Shapes;
 
 namespace WpfApplication1
@@ -15,12 +16,24 @@ namespace WpfApplication1
         {
             x = initx;
             y = inity;
-            CreateEllipse();
+            CreateEllipse(false);
         }
 
-        private void CreateEllipse()
+        public drawCircle(int initx , int inity , Color ShapeColor)
+        {
+            x = initx;
+            y = inity;
+            ShapeColor = this.ShapeColor;
+            CreateEllipse(true);
+        }
+
+        private void CreateEllipse(bool color)
         {
             this.ellipse = new Ellipse();
+            if (color)
+            {
+                this.ellipse.Fill = new SolidColorBrush(ShapeColor);
+            }            
             this.ellipse.Stroke = this.brush;
             this.ellipse.Height = this.size;
             this.ellipse.Width = this.size;

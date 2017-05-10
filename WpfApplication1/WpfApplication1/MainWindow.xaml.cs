@@ -55,7 +55,7 @@ namespace WpfApplication1
             if (CheckCbItem() == "")
             {
                 // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...   
-                MessageBox.Show(Mouse.GetPosition(drawCanvas).X.ToString());             
+                             
             }
             else if (CheckCbItem() == "Square")
             {
@@ -64,6 +64,8 @@ namespace WpfApplication1
             else if (CheckCbItem() == "Circle")
             {
                 // methode maken die een gekleurd circeltje op de geklikte plek laat zien
+                drawCircle coloredCircle = new drawCircle((int)Mouse.GetPosition(drawCanvas).X, (int)Mouse.GetPosition(drawCanvas).Y , RandomColor.getColor());
+                coloredCircle.DisplayOn(this.drawCanvas);
             }
             else if (CheckCbItem() == "Line")
             {
@@ -83,7 +85,8 @@ namespace WpfApplication1
             }
             else if (CheckCbItem() == "Circle")
             {
-                // methode maken die een circeltje op de geklikte plek laat zien
+                drawCircle circle1 = new drawCircle((int)Mouse.GetPosition(drawCanvas).X , (int)Mouse.GetPosition(drawCanvas).Y);
+                circle1.DisplayOn(this.drawCanvas);
             }
             else if (CheckCbItem() == "Line")
             {

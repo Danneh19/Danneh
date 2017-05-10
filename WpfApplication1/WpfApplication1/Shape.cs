@@ -12,6 +12,7 @@ namespace WpfApplication1
     {
         protected int x;
         protected int y;
+        protected Color ShapeColor;
         protected int x1;
         protected int y2;
         protected int x2;
