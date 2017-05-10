@@ -15,19 +15,11 @@ namespace WpfApplication1
             return RandomColor.random.Next(min, max + 1);
         }
 
-        public static Color getColor(bool alpha = false)
+        public static Color getColor()
         {
             int[] argb = new int[4];
-
-            if (alpha)
-            {
-                argb[0] += RandomColor.generateNumber(0, 255);
-            }
-            else
-            {
-                argb[0] = 255;
-            }
-
+            argb[0] += RandomColor.generateNumber(0, 255);
+            
             for (int colorIndex = 1; colorIndex < 4; colorIndex++)
             {
                 argb[colorIndex] = RandomColor.generateNumber(0, 255);

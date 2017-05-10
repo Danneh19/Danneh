@@ -54,7 +54,8 @@ namespace WpfApplication1
             
             if (CheckCbItem() == "")
             {
-                // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...
+                // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...   
+                MessageBox.Show(Mouse.GetPosition(drawCanvas).X.ToString());             
             }
             else if (CheckCbItem() == "Square")
             {
