@@ -19,11 +19,11 @@ namespace WpfApplication1
             CreateEllipse(false);
         }
 
-        public drawCircle(int initx , int inity , Color ShapeColor)
+        public drawCircle(int initx , int inity , Color shapeColor)
         {
             x = initx;
             y = inity;
-            ShapeColor = this.ShapeColor;
+            ShapeColor = shapeColor;
             CreateEllipse(true);
         }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Controls;
 using System.Windows.Shapes;
+using System.Windows.Media;
 
 namespace WpfApplication1
 {
@@ -14,12 +15,24 @@ namespace WpfApplication1
         {
             this.x = initX;
             this.y = initY;
-            CreateRectangle();
+            CreateRectangle(false);
         }
 
-        private void CreateRectangle()
+        public drawSquare(int initx , int initY , Color shapeColor)
+        {
+            this.x = initx;
+            this.y = initY;
+            this.ShapeColor = shapeColor;
+            CreateRectangle(true);
+        }
+
+        private void CreateRectangle(bool color)
         {
             this.rect = new Rectangle();
+            if (color)
+            {
+                this.rect.Fill = new SolidColorBrush(ShapeColor);
+            }
             this.rect.Stroke = this.brush;
             this.rect.Height = this.size;
             this.rect.Width = this.size;
