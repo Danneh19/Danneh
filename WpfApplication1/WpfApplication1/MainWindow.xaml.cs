@@ -102,5 +102,28 @@ namespace WpfApplication1
             }
         }
 
+        private void drawCanvas_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            Polyline poly = new Polyline();
+            poly.Stroke = new SolidColorBrush(Colors.Blue);
+            poly.StrokeThickness = 4;
+
+            Point Point1 = new Point((int)Mouse.GetPosition(drawCanvas).X , (int)Mouse.GetPosition(drawCanvas).X + 90);
+            Point Point2 = new Point((int)Mouse.GetPosition(drawCanvas).X + 90, (int)Mouse.GetPosition(drawCanvas).X + 190);
+            Point Point3 = new Point((int)Mouse.GetPosition(drawCanvas).X + 190, (int)Mouse.GetPosition(drawCanvas).X + 20);
+            Point Point4 = new Point((int)Mouse.GetPosition(drawCanvas).X + 240, (int)Mouse.GetPosition(drawCanvas).X + 190);
+            Point Point5 = new Point((int)Mouse.GetPosition(drawCanvas).X + 190, (int)Mouse.GetPosition(drawCanvas).X + 140);
+
+            PointCollection polyPoints = new PointCollection();
+            polyPoints.Add(Point1);
+            polyPoints.Add(Point2);
+            polyPoints.Add(Point3);
+            polyPoints.Add(Point4);
+            polyPoints.Add(Point5);
+
+            poly.Points = polyPoints;
+
+            drawCanvas.Children.Add(poly);
+        }
     }
 }
