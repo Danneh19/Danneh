@@ -33,10 +33,12 @@ namespace WpfApplication1
 
         private void CreateLine(bool color)
         {
+            ToolTip tt = new ToolTip();
             line = new Line();
             if (color)
             {
                 line.Stroke = new SolidColorBrush(ShapeColor);
+                tt.Content = line.Stroke;
             }
             else
             {
@@ -47,6 +49,7 @@ namespace WpfApplication1
             line.Y1 = y1;
             line.Y2 = y2;
             line.StrokeThickness = 2;
+            line.ToolTip = tt;
         }
 
         public override void DisplayOn(Canvas drawArea)

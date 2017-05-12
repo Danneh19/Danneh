@@ -28,15 +28,18 @@ namespace WpfApplication1
 
         private void CreateRectangle(bool color)
         {
+            ToolTip tt = new ToolTip();
             this.rect = new Rectangle();
             if (color)
             {
                 this.rect.Fill = new SolidColorBrush(ShapeColor);
+                tt.Content = rect.Fill;
             }
             this.rect.Stroke = this.brush;
             this.rect.Height = this.size;
             this.rect.Width = this.size;
             this.rect.Margin = new System.Windows.Thickness(this.x, this.y, 0, 0);
+            rect.ToolTip = tt;
         }
 
         public override void DisplayOn(Canvas drawArea)
