@@ -3,23 +3,26 @@
   <Class Name="WpfApplication1.Shape">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAIAAAAAAAAAAAAgAAABgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAIAAAAAAAwAAAAiAAQBgAAAAAAA=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="WpfApplication1.Square">
+  <Class Name="WpfApplication1.drawSquare">
     <Position X="4.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAIAAgAAAAAAAAAAAA=</HashCode>
-      <FileName>Square.cs</FileName>
+      <FileName>drawSquare.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="WpfApplication1.Circle">
+  <Class Name="WpfApplication1.drawCircle">
     <Position X="7.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAA=</HashCode>
-      <FileName>Circle.cs</FileName>
+      <FileName>drawCircle.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="WpfApplication1.drawLine">
     <Position X="10" Y="4" Width="1.5" />
@@ -27,6 +30,14 @@
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAAAAAAA=</HashCode>
       <FileName>drawLine.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
+  <Interface Name="WpfApplication1.iDisplayable" Collapsed="true">
+    <Position X="8.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>iDisplayable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="drawCircle.cs" />
     <Compile Include="drawLine.cs" />
+    <Compile Include="iDisplayable.cs" />
     <Compile Include="RandomColor.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="drawSquare.cs" />

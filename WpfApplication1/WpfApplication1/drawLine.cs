@@ -7,7 +7,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    public class drawLine : Shape
+    public class drawLine : Shape, iDisplayable
     {
         private Line line;
 
@@ -18,7 +18,7 @@ namespace WpfApplication1
             x2 = initX2;
             y2 = initY2;
             CreateLine();
-                
+
         }
 
         private void CreateLine()

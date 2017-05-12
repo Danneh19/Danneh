@@ -7,7 +7,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    public class drawSquare : Shape
+    public class drawSquare : Shape, iDisplayable
     {
         private Rectangle rect;
         public drawSquare(int initX, int initY)

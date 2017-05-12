@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace WpfApplication1
 {
-    public abstract class Shape
+    public abstract class Shape : iDisplayable
     {
         protected int x;
         protected int y;

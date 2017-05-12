@@ -8,7 +8,7 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
-    public class drawCircle : Shape
+    public class drawCircle : Shape, iDisplayable
     {
         private Ellipse ellipse;
         public drawCircle(int initx, int inity)
