@@ -9,7 +9,7 @@
     <Grid>
         <Canvas x:Name="drawCanvas" HorizontalAlignment="Left" Height="500" Margin="10,61,0,0" VerticalAlignment="Top" Width="725" Background="#FFCBCBCB" MouseRightButtonUp="drawCanvas_MouseRightButtonUp" MouseLeftButtonUp="drawCanvas_MouseLeftButtonUp" MouseWheel="drawCanvas_MouseWheel" ToolTipOpening="drawCanvas_ToolTipOpening"/>
         <ComboBox x:Name="ShapesBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="267" Height="46" FontSize="32" SelectedIndex="-1"/>
-        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" Width="125" Height="46"/>
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" Width="125" Height="46" Click="Save_Click"/>
         <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="507,10,0,0" VerticalAlignment="Top" Width="125" Height="46"/>
 
     </Grid>

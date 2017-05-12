@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -133,6 +135,25 @@ namespace WpfApplication1
             ToolTip tp = new ToolTip { Content = "Hoi" };
             drawCanvas.ToolTip = tp;
             tp.IsOpen = true;
+        }
+        private void save()
+        {
+            string FileName = "../../Save/mysecretfile.txt";
+
+
+            string mystrXAML = XamlWriter.Save(drawCanvas.Children);
+            FileStream filestream = File.Create(FileName);
+            StreamWriter streamwriter = new StreamWriter(filestream);
+
+            streamwriter.Write(mystrXAML);
+
+            streamwriter.Close();
+            filestream.Close();
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            save();
         }
     }
 }
