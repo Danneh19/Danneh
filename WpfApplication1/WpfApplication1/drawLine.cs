@@ -8,7 +8,7 @@ using System.Windows.Media;
 
 namespace WpfApplication1
 {
-    public class drawLine : Shape
+    public class drawLine : Shape, iDisplayable
     {
         private Line line;
 
@@ -18,10 +18,10 @@ namespace WpfApplication1
             y1 = initY1;
             x2 = initX1 + 50;
             y2 = initY1 + 50;
-            CreateLine(false);                
+            CreateLine(false);
         }
-        
-        public drawLine(int initX1 , int initY1 , Color shapeColor)
+
+        public drawLine(int initX1, int initY1, Color shapeColor)
         {
             x1 = initX1;
             y1 = initY1;
@@ -38,7 +38,8 @@ namespace WpfApplication1
             {
                 line.Stroke = new SolidColorBrush(ShapeColor);
             }
-            else {
+            else
+            {
                 line.Stroke = brush;
             }
             line.X1 = x1;
