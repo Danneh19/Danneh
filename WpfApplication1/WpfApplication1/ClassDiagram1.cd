@@ -3,7 +3,7 @@
   <Class Name="WpfApplication1.Shape">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAAAAAIAAAAAAAwAAAAiAAQBgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAgAAAAAAAIAAAAAAAwAAAAiAAQBgAACAAAA=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -30,7 +30,6 @@
       <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAAAAAAA=</HashCode>
       <FileName>drawLine.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="WpfApplication1.iDisplayable" Collapsed="true">
     <Position X="8.5" Y="1" Width="1.5" />
