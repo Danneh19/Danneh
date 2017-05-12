@@ -55,6 +55,7 @@ namespace WpfApplication1
             if (CheckCbItem() == "")
             {
                 // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...   
+                MessageBox.Show("U moet een keuze uit een vormpje" , "Maak een keuze" , MessageBoxButton.OK , MessageBoxImage.Warning);
                              
             }
             else if (CheckCbItem() == "Square")
@@ -82,6 +83,7 @@ namespace WpfApplication1
             if (CheckCbItem() == "")
             {
                 // Alert maken die de gebruiker laat weten dat hij beter wat gaat invullen of anders...
+                MessageBox.Show("U moet een keuze uit een vormpje", "Maak een keuze", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else if (CheckCbItem() == "Square")
             {
