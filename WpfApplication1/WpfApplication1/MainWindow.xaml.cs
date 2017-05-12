@@ -127,5 +127,12 @@ namespace WpfApplication1
 
             drawCanvas.Children.Add(poly);
         }
+
+        private void drawCanvas_ToolTipOpening(object sender, ToolTipEventArgs e)
+        {
+            ToolTip tp = new ToolTip { Content = "Hoi" };
+            drawCanvas.ToolTip = tp;
+            tp.IsOpen = true;
+        }
     }
 }
