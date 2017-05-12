@@ -7,6 +7,9 @@ using System.Windows.Controls;
 
 namespace WpfApplication1
 {
+    /// <summary>
+    /// Interface voor de DisplayOn methode.
+    /// </summary>
     public interface iDisplayable
     {
         void DisplayOn(Canvas drawArea);
