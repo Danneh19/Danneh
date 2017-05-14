@@ -135,7 +135,7 @@ namespace WpfApplication1
         
         private void save()
         {
-<<<<<<< HEAD
+
             string FileName = "../../Save/mysecretfile.txt";
             File.WriteAllText(FileName, String.Empty);
 
@@ -159,19 +159,7 @@ namespace WpfApplication1
                 {
                     streamwriter.WriteLine(list);
                 }
-=======
 
-            try
-            {
-                string mystrXAML = XamlWriter.Save(drawCanvas.Children);
-                FileStream filestream = File.Create(FileName);
-                StreamWriter streamwriter = new StreamWriter(filestream);
-                streamwriter.Write(mystrXAML);
-                streamwriter.Close();
-                filestream.Close();
-
-                
->>>>>>> origin/master
                 MessageBox.Show("Succesvol opgeslagen", "Opgeslagen", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch(Exception ex)
@@ -190,12 +178,10 @@ namespace WpfApplication1
                 drawCanvas.Children.Add();
             }      */
             StreamReader streamreader = new StreamReader(FileName);
-<<<<<<< HEAD
+
             /*string xamlAdd = XamlReader.Load(FileName);
             drawCanvas = (Canvas)System.Windows.Markup.XamlReader.Load(xamlAdd);*/
 
-        
-=======
             string mystrXAML = streamreader.ReadToEnd();
             XmlTextReader reader = new XmlTextReader(new System.IO.StringReader(mystrXAML));
             reader.Read();
@@ -205,23 +191,16 @@ namespace WpfApplication1
             {
                 drawCanvas = (Canvas)XamlReader.Load(reader);
             }
-            
 
-
-
-
-
-
->>>>>>> origin/master
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
+
             save();
-=======
+
             load();
->>>>>>> origin/master
+
         }
     }
 }
