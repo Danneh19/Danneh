@@ -47,6 +47,7 @@ namespace WpfApplication1
         }
         public void save()
         {
+            
             string FileName = "../../Save/mysecretfile.txt";
             
             string mystrXAML = XamlWriter.Save(this.rect);
@@ -55,6 +56,7 @@ namespace WpfApplication1
             shapeRect.Add(mystrXAML);
 
             streamwriter.Close();
+            
         }
 
         public override void DisplayOn(Canvas drawArea)

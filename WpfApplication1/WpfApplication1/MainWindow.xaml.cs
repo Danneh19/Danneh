@@ -132,10 +132,10 @@ namespace WpfApplication1
             drawCanvas.Children.Add(poly);
         }
 
-        
+
         private void save()
         {
-<<<<<<< HEAD
+
             string FileName = "../../Save/mysecretfile.txt";
             File.WriteAllText(FileName, String.Empty);
 
@@ -143,12 +143,12 @@ namespace WpfApplication1
             List<string> shapeEl = drawCircle.shapeEllipse;
             List<string> shapeRect = drawSquare.shapeRect;
             List<string> shapeLine = drawLine.shapeLine;
-            
+
             try
             {
-                foreach(string list in shapeEl)
+                foreach (string list in shapeEl)
                 {
-                    
+
                     streamwriter.WriteLine(list);
                 }
                 foreach (string list in shapeRect)
@@ -159,26 +159,31 @@ namespace WpfApplication1
                 {
                     streamwriter.WriteLine(list);
                 }
-=======
 
-            try
-            {
-                string mystrXAML = XamlWriter.Save(drawCanvas.Children);
-                FileStream filestream = File.Create(FileName);
-                StreamWriter streamwriter = new StreamWriter(filestream);
-                streamwriter.Write(mystrXAML);
+
+                try
+                {
+                    string mystrXAML = XamlWriter.Save(drawCanvas.Children);
+                    FileStream filestream = File.Create(FileName);
+                    StreamWriter streamwriter1 = new StreamWriter(filestream);
+                    streamwriter1.Write(mystrXAML);
+                    streamwriter1.Close();
+                    filestream.Close();
+
+
+
+                    MessageBox.Show("Succesvol opgeslagen", "Opgeslagen", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Foutmelding", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
                 streamwriter.Close();
-                filestream.Close();
-
-                
->>>>>>> origin/master
-                MessageBox.Show("Succesvol opgeslagen", "Opgeslagen", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Foutmelding", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            streamwriter.Close();
         }
 
         private void load()
@@ -190,12 +195,12 @@ namespace WpfApplication1
                 drawCanvas.Children.Add();
             }      */
             StreamReader streamreader = new StreamReader(FileName);
-<<<<<<< HEAD
+
             /*string xamlAdd = XamlReader.Load(FileName);
             drawCanvas = (Canvas)System.Windows.Markup.XamlReader.Load(xamlAdd);*/
 
         
-=======
+
             string mystrXAML = streamreader.ReadToEnd();
             XmlTextReader reader = new XmlTextReader(new System.IO.StringReader(mystrXAML));
             reader.Read();
@@ -212,16 +217,21 @@ namespace WpfApplication1
 
 
 
->>>>>>> origin/master
+
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
+
             save();
-=======
+
+            
+
+        }
+
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
             load();
->>>>>>> origin/master
         }
     }
 }

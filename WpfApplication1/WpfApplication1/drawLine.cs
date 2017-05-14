@@ -61,9 +61,11 @@ namespace WpfApplication1
         }
         public void save()
         {
+            
             string mystrXAML = XamlWriter.Save(this.line);
 
             shapeLine.Add(mystrXAML);
+            
         }
     }
 }

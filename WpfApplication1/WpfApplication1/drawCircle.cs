@@ -50,7 +50,7 @@ namespace WpfApplication1
         public void save()
         {
             
-
+            
             string FileName = "../../Save/mysecretfile.txt";
 
             string mystrXAML = XamlWriter.Save(this.ellipse);
@@ -59,6 +59,7 @@ namespace WpfApplication1
             shapeEllipse.Add(mystrXAML);
 
             streamwriter.Close();
+            
         }
         public override void DisplayOn(Canvas drawArea)
         {
