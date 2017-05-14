@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.Windows.Media;
+using System.Windows.Markup;
+using System.IO;
 
 namespace WpfApplication1
 {
@@ -50,11 +52,23 @@ namespace WpfApplication1
             line.Y2 = y2;
             line.StrokeThickness = 2;
             line.ToolTip = tt;
+            save();
         }
 
         public override void DisplayOn(Canvas drawArea)
         {
             drawArea.Children.Add(this.line);
+        }
+        public void save()
+        {
+            string FileName = "../../Save/mysecretfile.txt";
+
+            string mystrXAML = XamlWriter.Save(this.line);
+            StreamWriter streamwriter = new StreamWriter(FileName, true);
+
+            streamwriter.WriteLine(mystrXAML);
+
+            streamwriter.Close();
         }
     }
 }

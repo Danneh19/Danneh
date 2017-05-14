@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -41,8 +43,19 @@ namespace WpfApplication1
             this.ellipse.Width = this.size;
             this.ellipse.Margin = new Thickness(x, y, 0, 0);                                
             ellipse.ToolTip = tt;
+            save();
         }
+        public void save()
+        {
+            string FileName = "../../Save/mysecretfile.txt";
 
+            string mystrXAML = XamlWriter.Save(this.ellipse);
+            StreamWriter streamwriter = new StreamWriter(FileName, true);
+
+            streamwriter.WriteLine(mystrXAML);
+
+            streamwriter.Close();
+        }
         public override void DisplayOn(Canvas drawArea)
         {
             drawArea.Children.Add(this.ellipse);

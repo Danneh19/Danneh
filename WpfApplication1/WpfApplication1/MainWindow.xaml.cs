@@ -138,22 +138,12 @@ namespace WpfApplication1
         }
         private void save()
         {
-            string FileName = "../../Save/mysecretfile.txt";
-
-
-            string mystrXAML = XamlWriter.Save(drawCanvas.Children);
-            FileStream filestream = File.Create(FileName);
-            StreamWriter streamwriter = new StreamWriter(filestream);
-
-            streamwriter.Write(mystrXAML);
-
-            streamwriter.Close();
-            filestream.Close();
+           
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            save();
+            
         }
     }
 }
