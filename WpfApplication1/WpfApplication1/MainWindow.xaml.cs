@@ -166,19 +166,13 @@ namespace WpfApplication1
             string mystrXAML = streamreader.ReadToEnd();
             XmlTextReader reader = new XmlTextReader(new System.IO.StringReader(mystrXAML));
             reader.Read();
-            string line;
+            //string line;
             string inner = reader.ReadInnerXml();
-            while ((line = streamreader.ReadLine()) != null)
-            {
-                drawCanvas = (Canvas)XamlReader.Load(reader);
-            }
-            
-
-
-
-
-
-
+            drawCanvas = (Canvas)XamlReader.Load(reader);
+            //while ((line = streamreader.ReadLine()) != null)
+            //{
+            //    drawCanvas = (Canvas)XamlReader.Load(reader);
+            //}         
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
