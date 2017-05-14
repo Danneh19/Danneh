@@ -135,12 +135,13 @@ namespace WpfApplication1
         private void save()
         {
             string FileName = "../../Save/mysecretfile.txt";
+            File.WriteAllText(FileName, String.Empty);
+
             StreamWriter streamwriter = new StreamWriter(FileName, true);
             List<string> shapeEl = drawCircle.shapeEllipse;
             List<string> shapeRect = drawSquare.shapeRect;
             List<string> shapeLine = drawLine.shapeLine;
-
-
+            
             try
             {
                 foreach(string list in shapeEl)
