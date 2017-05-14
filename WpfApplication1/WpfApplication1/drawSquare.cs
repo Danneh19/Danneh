@@ -48,7 +48,7 @@ namespace WpfApplication1
         public void save()
         {
             string FileName = "../../Save/mysecretfile.txt";
-
+            
             string mystrXAML = XamlWriter.Save(this.rect);
             StreamWriter streamwriter = new StreamWriter(FileName, true);
 
