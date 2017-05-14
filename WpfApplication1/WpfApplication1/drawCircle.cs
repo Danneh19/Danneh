@@ -11,8 +11,10 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
+    
     public class drawCircle : Shape, iDisplayable
     {
+        public static List<string> shapeEllipse = new List<string>();
         private Ellipse ellipse;
         public drawCircle(int initx, int inity)
         {
@@ -47,12 +49,14 @@ namespace WpfApplication1
         }
         public void save()
         {
+            
+
             string FileName = "../../Save/mysecretfile.txt";
 
             string mystrXAML = XamlWriter.Save(this.ellipse);
             StreamWriter streamwriter = new StreamWriter(FileName, true);
 
-            streamwriter.WriteLine(mystrXAML);
+            shapeEllipse.Add(mystrXAML);
 
             streamwriter.Close();
         }

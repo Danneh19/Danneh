@@ -13,7 +13,7 @@ namespace WpfApplication1
     public class drawLine : Shape, iDisplayable
     {
         private Line line;
-
+        public static List<string> shapeLine = new List<string>();
         public drawLine(int initX1, int initY1)
         {
             x1 = initX1;
@@ -61,14 +61,9 @@ namespace WpfApplication1
         }
         public void save()
         {
-            string FileName = "../../Save/mysecretfile.txt";
-
             string mystrXAML = XamlWriter.Save(this.line);
-            StreamWriter streamwriter = new StreamWriter(FileName, true);
 
-            streamwriter.WriteLine(mystrXAML);
-
-            streamwriter.Close();
+            shapeLine.Add(mystrXAML);
         }
     }
 }

@@ -20,6 +20,8 @@ namespace WpfApplication1
         protected int size = 75;
         protected SolidColorBrush brush = new SolidColorBrush(Colors.Black);
 
+       
+
         public abstract void DisplayOn(Canvas drawCanvas);
 
     }

@@ -12,6 +12,7 @@ namespace WpfApplication1
 {
     public class drawSquare : Shape, iDisplayable
     {
+        public static List<string> shapeRect = new List<string>();
         private Rectangle rect;
         public drawSquare(int initX, int initY)
         {
@@ -51,7 +52,7 @@ namespace WpfApplication1
             string mystrXAML = XamlWriter.Save(this.rect);
             StreamWriter streamwriter = new StreamWriter(FileName, true);
 
-            streamwriter.WriteLine(mystrXAML);
+            shapeRect.Add(mystrXAML);
 
             streamwriter.Close();
         }

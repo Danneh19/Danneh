@@ -134,23 +134,35 @@ namespace WpfApplication1
         
         private void save()
         {
-<<<<<<< HEAD
-           
-=======
+            string FileName = "../../Save/mysecretfile.txt";
+            StreamWriter streamwriter = new StreamWriter(FileName, true);
+            List<string> shapeEl = drawCircle.shapeEllipse;
+            List<string> shapeRect = drawSquare.shapeRect;
+            List<string> shapeLine = drawLine.shapeLine;
+
+
             try
             {
-                string mystrXAML = XamlWriter.Save(drawCanvas);
-                FileStream filestream = File.Create(FileName);
-                StreamWriter streamwriter = new StreamWriter(filestream);
-                streamwriter.Write(mystrXAML);
-                streamwriter.Close();
-                filestream.Close();
+                foreach(string list in shapeEl)
+                {
+                    
+                    streamwriter.WriteLine(list);
+                }
+                foreach (string list in shapeRect)
+                {
+                    streamwriter.WriteLine(list);
+                }
+                foreach (string list in shapeLine)
+                {
+                    streamwriter.WriteLine(list);
+                }
                 MessageBox.Show("Succesvol opgeslagen", "Opgeslagen", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Foutmelding", MessageBoxButton.OK, MessageBoxImage.Error);
-            }         
+            }
+            streamwriter.Close();
         }
 
         private void load()
@@ -159,16 +171,12 @@ namespace WpfApplication1
             /*string xamlAdd = XamlReader.Load(FileName);
             drawCanvas = (Canvas)System.Windows.Markup.XamlReader.Load(xamlAdd);*/
 
-            
-
-           
-
->>>>>>> origin/master
+        
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            
+            save();
         }
     }
 }
