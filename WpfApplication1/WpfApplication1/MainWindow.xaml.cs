@@ -135,6 +135,31 @@ namespace WpfApplication1
         
         private void save()
         {
+<<<<<<< HEAD
+            string FileName = "../../Save/mysecretfile.txt";
+            File.WriteAllText(FileName, String.Empty);
+
+            StreamWriter streamwriter = new StreamWriter(FileName, true);
+            List<string> shapeEl = drawCircle.shapeEllipse;
+            List<string> shapeRect = drawSquare.shapeRect;
+            List<string> shapeLine = drawLine.shapeLine;
+            
+            try
+            {
+                foreach(string list in shapeEl)
+                {
+                    
+                    streamwriter.WriteLine(list);
+                }
+                foreach (string list in shapeRect)
+                {
+                    streamwriter.WriteLine(list);
+                }
+                foreach (string list in shapeLine)
+                {
+                    streamwriter.WriteLine(list);
+                }
+=======
 
             try
             {
@@ -146,12 +171,14 @@ namespace WpfApplication1
                 filestream.Close();
 
                 
+>>>>>>> origin/master
                 MessageBox.Show("Succesvol opgeslagen", "Opgeslagen", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Foutmelding", MessageBoxButton.OK, MessageBoxImage.Error);
-            }         
+            }
+            streamwriter.Close();
         }
 
         private void load()
@@ -163,21 +190,38 @@ namespace WpfApplication1
                 drawCanvas.Children.Add();
             }      */
             StreamReader streamreader = new StreamReader(FileName);
+<<<<<<< HEAD
+            /*string xamlAdd = XamlReader.Load(FileName);
+            drawCanvas = (Canvas)System.Windows.Markup.XamlReader.Load(xamlAdd);*/
+
+        
+=======
             string mystrXAML = streamreader.ReadToEnd();
             XmlTextReader reader = new XmlTextReader(new System.IO.StringReader(mystrXAML));
             reader.Read();
-            //string line;
+            string line;
             string inner = reader.ReadInnerXml();
-            drawCanvas = (Canvas)XamlReader.Load(reader);
-            //while ((line = streamreader.ReadLine()) != null)
-            //{
-            //    drawCanvas = (Canvas)XamlReader.Load(reader);
-            //}         
+            while ((line = streamreader.ReadLine()) != null)
+            {
+                drawCanvas = (Canvas)XamlReader.Load(reader);
+            }
+            
+
+
+
+
+
+
+>>>>>>> origin/master
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
+            save();
+=======
             load();
+>>>>>>> origin/master
         }
     }
 }
