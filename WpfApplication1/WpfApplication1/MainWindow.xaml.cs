@@ -22,6 +22,7 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string FileName = "../../Save/mysecretfile.txt";
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
@@ -130,15 +131,39 @@ namespace WpfApplication1
             drawCanvas.Children.Add(poly);
         }
 
-        private void drawCanvas_ToolTipOpening(object sender, ToolTipEventArgs e)
-        {
-            ToolTip tp = new ToolTip { Content = "Hoi" };
-            drawCanvas.ToolTip = tp;
-            tp.IsOpen = true;
-        }
+        
         private void save()
         {
+<<<<<<< HEAD
            
+=======
+            try
+            {
+                string mystrXAML = XamlWriter.Save(drawCanvas);
+                FileStream filestream = File.Create(FileName);
+                StreamWriter streamwriter = new StreamWriter(filestream);
+                streamwriter.Write(mystrXAML);
+                streamwriter.Close();
+                filestream.Close();
+                MessageBox.Show("Succesvol opgeslagen", "Opgeslagen", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Foutmelding", MessageBoxButton.OK, MessageBoxImage.Error);
+            }         
+        }
+
+        private void load()
+        {
+            StreamReader streamreader = new StreamReader(FileName);
+            /*string xamlAdd = XamlReader.Load(FileName);
+            drawCanvas = (Canvas)System.Windows.Markup.XamlReader.Load(xamlAdd);*/
+
+            
+
+           
+
+>>>>>>> origin/master
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
