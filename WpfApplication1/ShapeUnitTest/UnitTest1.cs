@@ -4,6 +4,7 @@ using WpfApplication1;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.Windows;
+using System.Windows.Media;
 
 namespace ShapeUnitTest
 {
@@ -97,14 +98,9 @@ namespace ShapeUnitTest
         }
 
         [TestMethod]
-        public void drawSquareColorTest()
+        public void ColorTest()
         {
-            Rectangle testobject = new Rectangle();
-            Canvas drawCanvas = new Canvas();
-            drawSquare coloredSquare = new drawSquare(100, 100, RandomColor.getColor());
-            coloredSquare.DisplayOn(drawCanvas);
-
-
+            
         }
     }
 }

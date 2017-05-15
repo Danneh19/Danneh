@@ -200,5 +200,10 @@ namespace WpfApplication1
             save();           
 
         }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            drawCanvas.Children.Clear();
+        }
     }
 }
