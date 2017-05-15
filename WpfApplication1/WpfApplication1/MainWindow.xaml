@@ -11,7 +11,7 @@
         <ComboBox x:Name="ShapesBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="267" Height="46" FontSize="32" SelectedIndex="-1"/>
         <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="298,10,0,0" VerticalAlignment="Top" Width="125" Height="46" Click="Save_Click"/>
         <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Margin="449,10,0,0" VerticalAlignment="Top" Width="125" Height="46"/>
-        <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Width="126" Height="46" Click="btnLoad_Click"/>
+        <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Width="126" Height="46" />
 
     </Grid>
 </Window>

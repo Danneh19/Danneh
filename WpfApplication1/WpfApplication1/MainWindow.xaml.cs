@@ -197,9 +197,7 @@ namespace WpfApplication1
         private void Save_Click(object sender, RoutedEventArgs e)
         {
 
-            save();
-
-            load();
+            save();           
 
         }
     }
